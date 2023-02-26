@@ -205,10 +205,13 @@ body {
 }
 
 .modal__form {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.modal__form-cintainer {
+  position: relative;
   background: #ffffff;
   padding: 32px 92px 60px;
 }

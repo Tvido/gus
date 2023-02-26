@@ -33,7 +33,9 @@
               народу. Слава Україні!
             </p>
 
-            <button class="gus__btn">Запустити гуся</button>
+            <button class="gus__btn" id="open-form-modal-btn">
+              Запустити гуся
+            </button>
           </div>
 
           <img class="gus__image" src="./img/gus.svg" alt="gus" />
@@ -95,32 +97,46 @@
       </div>
     </footer>
 
-    <div class="modal__bgnd">
-      <form action="#" class="modal__form">
+    <div class="modal__bgnd" id="form-modal">
+      <div class="modal__form-cintainer">
         <button class="close__btn">X</button>
 
-        <img class="modal__form-logo" src="./img/trezub.svg" alt="tryzub" />
+        <form action="#" class="modal__form" id="form" data-netlify="true">
+          <img class="modal__form-logo" src="./img/trezub.svg" alt="tryzub" />
 
-        <h4 class="modal__form-title">Поділися, будь ласка, поштою</h4>
+          <h4 class="modal__form-title">Поділися, будь ласка, поштою</h4>
 
-        <p class="modal__form-description">та запиши гуся до бандерозагону</p>
+          <p class="modal__form-description">та запиши гуся до бандерозагону</p>
 
-        <div class="modal__form-field">
-          <label for="user-name" class="modal__form-field-name">Ім'я</label>
-          <input type="text" class="modal__form-field-input" id="user-name" />
-        </div>
+          <div class="modal__form-field">
+            <label for="user-name" class="modal__form-field-name">Ім'я</label>
+            <input
+              type="text"
+              class="modal__form-field-input"
+              id="user-name"
+              name="Ім'я"
+            />
+          </div>
 
-        <div class="modal__form-field">
-          <label for="user-email" class="modal__form-field-name">Email</label>
-          <input type="email" class="modal__form-field-input" id="user-email" />
-        </div>
+          <div class="modal__form-field">
+            <label for="user-email" class="modal__form-field-name">Email</label>
+            <input
+              type="email"
+              class="modal__form-field-input"
+              id="user-email"
+              name="Email"
+            />
+          </div>
 
-        <button class="modal__form-submit">Запустити гуся</button>
-      </form>
+          <button class="modal__form-submit" id="launch-btn">
+            Запустити гуся
+          </button>
+        </form>
+      </div>
     </div>
 
-    <div class="modal__bgnd">
-      <div class="modal__form">
+    <div class="modal__bgnd" id="success-modal">
+      <div class="modal__form modal__form-cintainer">
         <button class="close__btn">X</button>
 
         <img class="modal__form-logo" src="./img/trezub.svg" alt="tryzub" />
@@ -132,5 +148,7 @@
         </p>
       </div>
     </div>
+
+    <script src="./scripts/form.js"></script>
   </body>
 </html>
