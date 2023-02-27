@@ -6,7 +6,7 @@ const form = document.querySelector("#form");
 
 const openFormModalBtn = document.querySelector("#open-form-modal-btn");
 const launchBtn = document.querySelector("#launch-btn");
-const closeBtns = document.querySelectorAll(".close-btn");
+const closeBtns = document.querySelectorAll(".close__btn");
 
 openFormModalBtn.addEventListener("click", () => {
   formModal.classList.add(MODAL_ACTIVE_CLASS_NAME);
@@ -65,12 +65,10 @@ form.addEventListener("submit", (e) => {
     .then(() => {
       showGooseAnim();
 
-      setTimeout(() => {
-        closeFormModal();
-        setTimeout(openSuccessModal, 700);
-        setTimeout(closeSuccessModal, 4000);
-        clearFormFields();
-      }, 4000);
-    })
+      closeFormModal();
+      setTimeout(openSuccessModal, 700);
+      setTimeout(closeSuccessModal, 3000);
+      clearFormFields();
+    }, 4000)
     .catch((error) => console.log("Sending form failed"));
 });
