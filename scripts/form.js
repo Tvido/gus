@@ -65,10 +65,12 @@ form.addEventListener("submit", (e) => {
     .then(() => {
       showGooseAnim();
 
-      closeFormModal();
-      setTimeout(openSuccessModal, 700);
-      setTimeout(closeSuccessModal, 3000);
-      clearFormFields();
-    }, 4000)
+      setTimeout(() => {
+        closeFormModal();
+        setTimeout(openSuccessModal, 700);
+        setTimeout(closeSuccessModal, 4000);
+        clearFormFields();
+      }, 4000);
+    })
     .catch((error) => console.log("Sending form failed"));
 });
