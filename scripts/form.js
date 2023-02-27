@@ -41,7 +41,7 @@ function clearFormFields() {
 }
 
 function showGooseAnim() {
-  const targetContainer = document.querySelector(".modal-form");
+  const targetContainer = document.querySelector(".modal__form");
   const gusImage = document.createElement("img");
   gusImage.setAttribute("src", "./img/gus-anim.gif");
   gusImage.classList.add("gus-anim");
