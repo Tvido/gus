@@ -139,6 +139,7 @@ body {
   display: flex;
   align-items: center;
   color: #1b1d1f;
+  margin-bottom: 32px;
 }
 
 .facts__item-description {
